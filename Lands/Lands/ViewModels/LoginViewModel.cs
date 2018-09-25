@@ -1,27 +1,56 @@
 ﻿using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Lands.ViewModels
 {
-    class LoginViewModel : INotifyPropertyChanged
-    {
-        #region Events
-        public event PropertyChangedEventHandler PropertyChanged;
+    class LoginViewModel : BaseViewModel
+    {       
+
+        #region Attributes
+        private string email;
+        private string password;
+        private bool isRunning;
+        private bool isEnabled;
         #endregion
 
         #region Properties 
         public string Email { get; set; }
-        public string Password { get; set; }
-        public bool IsRunning { get; set; }
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                SetValue(ref this.password, value);
+            }
+        }
+        public bool IsRunning
+        {
+            get
+            {
+                return this.isRunning;
+            }
+            set
+            {
+                SetValue(ref this.isRunning, value);
+            }
+        }
         public bool IsRemember { get; set; }
+        public bool IsEnabled
+        {
+            get
+            {
+                return this.isEnabled
+            }
+            set
+            {
+                SetValue(ref this.isEnabled, value);
+            }
+        }
         #endregion
-
-
 
         #region Commands
         public ICommand LoginCommand
@@ -52,8 +81,13 @@ namespace Lands.ViewModels
                 return;
             }
 
+            this.IsRunning = true;
+            this.IsEnabled = false;
+
             if (this.Email != "stalin2789@yahoo.es" || this.Password != "1234")
             {
+                this.IsRunning = false;
+                this.IsEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "Email or password incorrect",
@@ -62,6 +96,8 @@ namespace Lands.ViewModels
                 return;
             }
 
+            this.IsRunning = false;
+            this.IsEnabled = true;
             await Application.Current.MainPage.DisplayAlert(
                     "Ok",
                     "Fuck yeah",
@@ -74,6 +110,7 @@ namespace Lands.ViewModels
         public LoginViewModel()
         {
             this.IsRemember = true;
+            this.isEnabled = true;
         }
         #endregion
     }

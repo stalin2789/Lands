@@ -89,14 +89,16 @@
                         TextColor="White"
                         BorderRadius="23"
                         HeightRequest="46"
-                        Command="{Binding LoginCommand}">
+                        Command="{Binding LoginCommand}"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
                     </Button>
                     <Button
                         Text="Register"
                         BackgroundColor="Purple"
                         TextColor="White"
                         BorderRadius="23"
-                        HeightRequest="46"> 
+                        HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"> 
                     </Button>
                 </StackLayout>
                 <StackLayout

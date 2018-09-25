@@ -5,10 +5,10 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Lands">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BindingContext="{Binding Login}">
             <StackLayout            
-                Padding="5">
-
+                Padding="5">                
                 <Image
                 Source="onu.png"
                 WidthRequest="200">
@@ -28,80 +28,92 @@
                         FontSize="Large"
                         VerticalTextAlignment="Center">
                     </Label>
+
                     <Entry
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    Placeholder="Enter your email..."
-                    Keyboard="Email">
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Placeholder="Enter your email..."
+                        Keyboard="Email"
+                        Text="{Binding Email, Mode=TwoWay}">                            
                     </Entry>
+
                     <Label 
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Text="Password"
-                    FontAttributes="Bold"
-                    FontSize="Large"
-                    VerticalOptions="Center">
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Password"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center">
                     </Label>
                     <Entry
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Placeholder="Enter your password..."
-                    IsPassword="True">
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Placeholder="Enter your password..."
+                        IsPassword="True"
+                        Text="{Binding Password, Mode=TwoWay}">
                     </Entry>
                 </Grid>
+                
                 <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
                     VerticalOptions="CenterAndExpand">
-
+                    <!--Cuando hay espacio se expande y cuando no , no hace nada-->
                 </ActivityIndicator>
-                <StackLayout Orientation="Horizontal">
-                    <Label
-                    HorizontalOptions="StartAndExpand"
-                Text="Remember me on this device"
-                    VerticalOptions="Center">
-                    </Label>
-                    <Switch HorizontalOptions="End">
-                    </Switch>
+                
+                <StackLayout 
+                    Orientation="Horizontal">
+                        <Label
+                            HorizontalOptions="StartAndExpand"
+                            Text="Remember me on this device"
+                            VerticalOptions="Center">
+                        </Label>
+                        <Switch 
+                            IsToggled="{Binding IsRemember, Mode=TwoWay}"
+                            HorizontalOptions="End">
+                        </Switch>
                 </StackLayout>
 
                 <StackLayout 
                     VerticalOptions="CenterAndExpand"
-                Margin="30, 0">
+                    Margin="30, 0">
                     <Label
                         FontAttributes="Bold"
                         VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="Center"
-                    TextColor="Blue"
-                    Text="Forgot your password?"></Label>
+                        HorizontalOptions="Center"
+                        TextColor="Blue"
+                        Text="Forgot your password?">                        
+                    </Label>
                     <Button
-                Text="Login"
-                BackgroundColor="Navy"
-                TextColor="White"
-                BorderRadius="23"
-                    HeightRequest="46">
+                        Text="Login"
+                        BackgroundColor="Navy"
+                        TextColor="White"
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        Command="{Binding LoginCommand}">
                     </Button>
                     <Button
-                Text="Register"
-                BackgroundColor="Purple"
-                TextColor="White"
-                BorderRadius="23"
-                    HeightRequest="46">
+                        Text="Register"
+                        BackgroundColor="Purple"
+                        TextColor="White"
+                        BorderRadius="23"
+                        HeightRequest="46"> 
                     </Button>
                 </StackLayout>
                 <StackLayout
                     VerticalOptions="EndAndExpand"
                     Margin="10,0"
-                Padding="5"
-                Orientation="Horizontal"
-                HorizontalOptions="Center">
+                    Padding="5"
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
                     <Image
-                    WidthRequest="40"
-                    Source="fb_logo.png"/>
+                        WidthRequest="40"
+                        Source="fb_logo.png"/>
                     <Image 
-                    WidthRequest="40"
-                    Source="twitter_logo.png"/>
+                        WidthRequest="40"
+                        Source="twitter_logo.png"/>
                     <Image 
-                    WidthRequest="40"
-                    Source="instagram_logo.png"/>
+                        WidthRequest="40"
+                        Source="instagram_logo.png"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

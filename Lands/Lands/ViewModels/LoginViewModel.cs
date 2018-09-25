@@ -21,6 +21,8 @@ namespace Lands.ViewModels
         public bool IsRemember { get; set; }
         #endregion
 
+
+
         #region Commands
         public ICommand LoginCommand
         {

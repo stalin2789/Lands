@@ -57,13 +57,16 @@
                 <StackLayout Orientation="Horizontal">
                     <Label
                     HorizontalOptions="StartAndExpand"
-                Text="Remember me in this device"
+                Text="Remember me on this device"
                     VerticalOptions="Center">
                     </Label>
                     <Switch HorizontalOptions="End">
                     </Switch>
                 </StackLayout>
-
+                <Label
+                    HorizontalOptions="Center"
+                    TextColor="Blue"
+                    Text="Forgot your password?"></Label>
                 <ActivityIndicator>
 
                 </ActivityIndicator>

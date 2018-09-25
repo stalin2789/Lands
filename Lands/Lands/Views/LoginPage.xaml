@@ -2,24 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.LoginPage"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Lands">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout            
-                Padding="10,20,10,5">
-                <Label 
-                Text="Lands"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                FontAttributes="Bold"
-                FontSize="Large">
-                </Label>
+                Padding="5">
+                
                 <Image
                 Source="onu.png"
                 WidthRequest="200">
                 </Image>
                 <Grid
-                Margin="0, 20">
+                    Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="2*"/>
@@ -63,16 +58,17 @@
                     <Switch HorizontalOptions="End">
                     </Switch>
                 </StackLayout>
-                <Label
-                    HorizontalOptions="Center"
-                    TextColor="Blue"
-                    Text="Forgot your password?"></Label>
+                
                 <ActivityIndicator>
 
                 </ActivityIndicator>
 
                 <StackLayout 
                 Margin="30, 0">
+                    <Label
+                    HorizontalOptions="Center"
+                    TextColor="Blue"
+                    Text="Forgot your password?"></Label>
                     <Button
                 Text="Login"
                 BackgroundColor="Navy"
@@ -89,6 +85,7 @@
                     </Button>
                 </StackLayout>
                 <StackLayout
+                    Margin="10,0"
                 Padding="5"
                 Orientation="Horizontal"
                 HorizontalOptions="Center">

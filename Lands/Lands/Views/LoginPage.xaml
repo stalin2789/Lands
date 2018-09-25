@@ -59,13 +59,16 @@
                     </Switch>
                 </StackLayout>
                 
-                <ActivityIndicator>
+                <ActivityIndicator
+                    VerticalOptions="CenterAndExpand">
 
                 </ActivityIndicator>
 
                 <StackLayout 
+                    VerticalOptions="CenterAndExpand"
                 Margin="30, 0">
                     <Label
+                        VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
                     TextColor="Blue"
                     Text="Forgot your password?"></Label>
@@ -85,6 +88,7 @@
                     </Button>
                 </StackLayout>
                 <StackLayout
+                    VerticalOptions="EndAndExpand"
                     Margin="10,0"
                 Padding="5"
                 Orientation="Horizontal"

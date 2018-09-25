@@ -8,7 +8,7 @@
         <ScrollView>
             <StackLayout            
                 Padding="5">
-                
+
                 <Image
                 Source="onu.png"
                 WidthRequest="200">
@@ -21,32 +21,32 @@
                     </Grid.ColumnDefinitions>
 
                     <Label
-                    Grid.Column="0"
-                    Grid.Row="0"
-                Text="E-Mail"
-                FontAttributes="Bold"
-                FontSize="Large"
-                VerticalTextAlignment="Center">
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="E-Mail"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalTextAlignment="Center">
                     </Label>
                     <Entry
                     Grid.Column="1"
                     Grid.Row="0"
-                Placeholder="Enter your email..."
-                Keyboard="Email">
+                    Placeholder="Enter your email..."
+                    Keyboard="Email">
                     </Entry>
                     <Label 
                     Grid.Column="0"
                     Grid.Row="1"
-                Text="Password"
-                FontAttributes="Bold"
-                FontSize="Large"
-                    VerticalTextAlignment="Center">
+                    Text="Password"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    VerticalOptions="Center">
                     </Label>
                     <Entry
                     Grid.Column="1"
                     Grid.Row="1"
-                Placeholder="Enter your password..."
-                IsPassword="True">
+                    Placeholder="Enter your password..."
+                    IsPassword="True">
                     </Entry>
                 </Grid>
                 <ActivityIndicator
@@ -61,8 +61,8 @@
                     </Label>
                     <Switch HorizontalOptions="End">
                     </Switch>
-                </StackLayout>               
-                
+                </StackLayout>
+
                 <StackLayout 
                     VerticalOptions="CenterAndExpand"
                 Margin="30, 0">
@@ -105,6 +105,6 @@
                 </StackLayout>
             </StackLayout>
         </ScrollView>
-        
+
     </ContentPage.Content>
 </ContentPage>

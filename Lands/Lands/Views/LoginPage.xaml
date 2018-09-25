@@ -49,6 +49,10 @@
                 IsPassword="True">
                     </Entry>
                 </Grid>
+                <ActivityIndicator
+                    VerticalOptions="CenterAndExpand">
+
+                </ActivityIndicator>
                 <StackLayout Orientation="Horizontal">
                     <Label
                     HorizontalOptions="StartAndExpand"
@@ -57,17 +61,13 @@
                     </Label>
                     <Switch HorizontalOptions="End">
                     </Switch>
-                </StackLayout>
+                </StackLayout>               
                 
-                <ActivityIndicator
-                    VerticalOptions="CenterAndExpand">
-
-                </ActivityIndicator>
-
                 <StackLayout 
                     VerticalOptions="CenterAndExpand"
                 Margin="30, 0">
                     <Label
+                        FontAttributes="Bold"
                         VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
                     TextColor="Blue"
@@ -94,13 +94,13 @@
                 Orientation="Horizontal"
                 HorizontalOptions="Center">
                     <Image
-                    WidthRequest="32"
+                    WidthRequest="40"
                     Source="fb_logo.png"/>
                     <Image 
-                    WidthRequest="32"
+                    WidthRequest="40"
                     Source="twitter_logo.png"/>
                     <Image 
-                    WidthRequest="32"
+                    WidthRequest="40"
                     Source="instagram_logo.png"/>
                 </StackLayout>
             </StackLayout>
